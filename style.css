@@ -1,0 +1,299 @@
+.navbar-brand:hover {
+  color: #ffcc33;
+}
+.feature-headline {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px;
+}
+.feature-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.feature-box {
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+/* r0tating squares */
+.square {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 10px;
+  animation: rotate 8s linear infinite;
+}
+
+#square1 {
+  background-color: #007bff;
+}
+
+#square2 {
+  background-color: #ff5733;
+}
+
+#square3 {
+  background-color: #33ff33;
+}
+
+#square4 {
+  background-color: #ffcc33;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-image {
+  width: 300px;
+  height: 200px;
+}
+.feature-description {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Clearfix for the last row of feature boxes */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media query to adjust the layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .feature-box {
+    width: 48%;
+  }
+}
+
+.trip-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.trip-box {
+  width: 20%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 60px;
+}
+.disabled {
+  cursor: no-drop !important;
+}
+
+.location {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.discount {
+  display: block;
+  color: green;
+  margin-top: 5px;
+}
+
+.blink {
+  width: 200px;
+  height: 50px;
+  /* 	    background-color: magenta; */
+  padding: 15px;
+  text-align: center;
+  line-height: 50px;
+}
+.discount {
+  font-size: 25px;
+  font-family: cursive;
+  color: green;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-line-book {
+  font-size: 84px;
+  text-align: center;
+}
+.sentence {
+  align-items: center;
+}
+
+.button123 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1a237e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+  margin-left: 314px;
+}
+
+.button123 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button123 span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.rotating-square {
+  margin: 20px;
+}
+
+.button123:hover span {
+  padding-right: 25px;
+}
+
+.button123:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.form-container {
+  background-image: linear-gradient(to right, red, yellow);
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a box shadow */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1a237e;
+}
+
+@media screen and (max-width: 850px) {
+  .feature-box {
+    width: 100%;
+  }
+  .trip-box {
+    width: 100%;
+  }
+  .button123 {
+    margin-left: 0;
+  }
+  .booking {
+    display: block;
+  }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 576px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .trip-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button123 {
+    width: 100%;
+    margin: 10px 0;
+    margin-left: 0;
+  }
+  .form-container {
+    max-width: 100%;
+  }
+  .booking {
+    display: block;
+  }
+  .booking img {
+    width: 350px;
+    height: auto;
+  }
+  .trip-container {
+    margin: 0 auto;
+  }
+  .trip-box {
+    margin-bottom: 20px;
+  }
+  .feature-container {
+    margin-bottom: 50px;
+  }
+  .button123 {
+    width: 50%;
+    margin-left: 90px;
+  }
+}
